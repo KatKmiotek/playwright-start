@@ -16,7 +16,7 @@ public class LinkedIn {
         page.waitForSelector(username_input);
         page.fill(username_input, "katarzyna.kmiotek@yahoo.com");
         page.waitForSelector(password_input);
-        page.fill(password_input, "Misia123");
+        page.fill(password_input, "");
         page.waitForSelector(sign_in_button);
         page.click(sign_in_button);
 
