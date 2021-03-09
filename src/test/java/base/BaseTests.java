@@ -17,12 +17,18 @@ public class BaseTests {
         browser = Playwright
                 .create()
                 .chromium()
-                .launch(new BrowserType.LaunchOptions().withHeadless(false));
+                .launch(new BrowserType.LaunchOptions().withHeadless(true));
+
+//        BrowserContext context = browser.newContext(new Browser.NewContextOptions()
+//                .withLocale("pol-PL")
+//                .withTimezoneId("Europe/Warsaw"));
+
 
         //A single browser tab
         Page page = browser.newPage();
         page.navigate("https://www.next.co.uk/");
         next = new Next(page);
+
 
     }
 
